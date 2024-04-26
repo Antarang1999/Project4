@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap">
+
+   
+    <title>Dino World</title> 
+    <style>
+
+        .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px;
+            }
+
+        .country{
+         
+            stroke: white;  
+            cursor : pointer;
+        }     
+      
+        
+        svg {
+            background-color: antiquewhite; 
+            display: inline-block;
+            }
+        
+        button{
+                display: none;
+            }
+
+        .tooltip {
+            position: absolute;
+            background-color: white;
+            border: 2px solid black;
+            padding: 5px;
+            font-size:16px;
+            pointer-events: none;
+            font-size: 10px;
+            opacity: 0;
+            pointer-events: all;
+        }
+
+
+    @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+
+    #logo {
+        max-width: 100px;
+        margin-right: 20px;
+    }
+
+
+    h1 {
+        font-family: 'Trajanus Roman', sans-serif;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    p{
+        font-family: 'Nunito Sans', sans-serif;
+        text-align : center
+    }
+
+    #logo:hover {
+    animation: shake 0.7s ease-in-out;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="logo" src="Logo.png" alt="Dinosaur Logo">
+        <h1>Dino World: A Global Journey into the Mesozoic Era</h1>
+    </div>
+   <p>Explore the world of dinosaurs based on where their lived. Click on a country to discover average height statistics categorized by type and the dietary preferences of dinosaurs in that region. Dive deeper by clicking on the bars to reveal detailed information about individual dinosaurs, including a URL for further exploration. Despite advancements, there's still much unknown about the lengths and diets of certain dinosaurs, adding an element of mystery to your exploration. Colour coding, tooltip, hover actions, map distribution with choropleth map are implemented along with legend for creating a good vizualization. </p>
+    
+    <script src="dino.js"></script>
+  
+</body>
+
+</html>
